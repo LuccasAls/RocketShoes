@@ -10,33 +10,68 @@
 * {
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
   }
+::-webkit-scrollbar {
+    display: none;
+}
+
 
 body {
     width: 100%;
     height: auto;
 }
 
+#logo-shop {
+    cursor: pointer;
+}
 
 
 header nav.nav-bar {
     display: flex;
+    position: absolute;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color:rgba(255, 255, 255, 0);
     padding: 30px 60px;
-    
+    z-index: 1;
  }
 
 div.navegation a {
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
+    border-bottom: 5px solid rgba(255, 255, 255, 0);
     font-size: 24px;
     color: var(--text);
+    cursor: pointer;
+    transition: all 0.3 ease-in-out ;
+    transform-origin: center;
+    transform: scale(0);
  }
+
+ div.navegation div.underline {
+    content: "";
+    transition: all 0.1s ease-in-out ;
+    transform-origin: left;
+    transform: scalex(0);
+    position: relative;
+    top: -3px;
+    height: 4px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--button);
+ }
+
+
+div.navegation a:hover ~ div.underline {
+    transform: scale(1);
+}
+
+
 
  div.search input {
     width: 220px;
@@ -56,7 +91,7 @@ div.navegation a {
 
  main {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
  }
 
  main div.price-container {
@@ -72,7 +107,7 @@ main div.price-container .title{
 }
 
 main div.price-container h2{
-    padding-top: 50px;
+    padding-top: 20vh;
     font-size: 60px;
     text-align: start;
     
@@ -96,17 +131,23 @@ main div.price-container button {
     height: 90px;
     background-color: var(--button);
     border: none;
-    color: var(--background);
+    color: white;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+main div.price-container button:hover {
+    letter-spacing: 6px;
+    font-size: 22px;
+}
+
+
 main section.container {
+    position: relative;
     background-color: var(--main-background);
-    position: absolute;
-    right: 0;
-    top: 0;
     z-index: -1;
     display: flex;
     flex-direction: column;
@@ -114,7 +155,7 @@ main section.container {
     justify-content: center;
     height: 890px;
     width: 63%;
-    padding-top: 5rem;
+    padding-top: 7rem;
 }
 
 main section.container div.section-products {
@@ -122,20 +163,22 @@ main section.container div.section-products {
     justify-content: space-between;
     width: 100%;
     padding: 0 18px;
+    
 }
 
 main section.container div.section-products img {
     width: 270px;
-    height: 182.8px;
+    height: 182px;
+    border-radius: 4px;
+    
 }
 
 main section.container div.section-products img:nth-child(2) {
     border-bottom: 5px solid var(--button);
 }
+
 footer {
     display: flex;
-    position: relative;
-    bottom: -12.1rem;
     justify-content: space-between;
     align-items: center;   
 
@@ -165,9 +208,68 @@ footer div.explorer-more {
 }
 
 footer div.explorer-more div:last-child {
-    padding-left: 10px;
+    padding-left: 5px;
     text-align: center;
-    position: relative;
-    bottom:  -2px;
+    transition: 0.5s ;
+}
+footer div.explorer-more:hover div:last-child {
+    padding-left: 25px;
+    size: 110%;
 }
 
+footer div.explorer-more:hover div:first-child {
+    letter-spacing: 1px;
+}
+
+footer div.social-media {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+     
+   
+}
+footer div.social-media a {
+    height: 166px;
+    width: 216px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer div.facebook:hover {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+footer div.facebook:hover a {
+    color: white;
+    font-size: 22px;
+}
+
+footer div.instagram:hover {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+footer div.instagram:hover a {
+    color: white;
+    font-size: 22px;
+}
+
+footer div.youtube:hover {
+    background: linear-gradient(125deg, #ff0000, #b10000);
+}
+footer div.youtube:hover a {
+    color: white;
+    font-size: 22px;
+}
+
+footer div.twitter:hover a {
+    color: white;
+    font-size: 22px;
+} 
+
+footer div.twitter:hover {
+    background: linear-gradient(to right, #56a7f2, #468aca);
+}
