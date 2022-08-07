@@ -4,7 +4,7 @@
  ## Layout Preview
  
  <div>
-  <img src="./assets/giphy.gif" alt="">
+  <img src="https://github.com/LuccasAls/RocketShoes/blob/main/RocketShoes/assets/Rocket%20Shoes%20-%20Google%20Chrome%202022-08-05%2018-03-28.gif" alt="">
 </div>
 
 ## Sobre o projeto 
