@@ -3,7 +3,7 @@
   
  ## Layout Preview
  
- <div style="display: inline-block">
+ <div>
   <img src="./assets/giphy.gif" alt="">
 </div>
 
