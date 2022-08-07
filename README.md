@@ -4,7 +4,7 @@
  ## Layout Preview
  
  <div style="display: inline-block">
-  <video src="./assets/Rocket Shoes - Google Chrome 2022-08-05 18-03-28.mp4"></video>
+  <video src="./assets/Rocket Shoes/giphy.gif"></video>
 </div>
 
 ## Sobre o projeto 
