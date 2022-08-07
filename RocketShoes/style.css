@@ -227,12 +227,13 @@ footer div.social-media {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    width: 20%;
      
    
 }
 footer div.social-media a {
     height: 166px;
-    width: 216px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
