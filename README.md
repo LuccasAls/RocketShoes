@@ -4,7 +4,7 @@
  ## Layout Preview
  
  <div style="display: inline-block">
-  <video src="./assets/Rocket Shoes/giphy.gif"></video>
+  <img src="./assets/giphy.gif" alt="">
 </div>
 
 ## Sobre o projeto 
